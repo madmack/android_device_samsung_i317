@@ -36,14 +36,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
     $(LOCAL_PATH)/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc
 
-#Using HAL for now
 # Audio
-
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-	$(LOCAL_PATH)/configs/tinyucm.conf:system/etc/tinyucm.conf \
-	$(LOCAL_PATH)/configs/default_gain.conf:system/etc/default_gain.conf
-#    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/t0att
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/t0att
 
 
 # Gps
@@ -58,7 +53,8 @@ PRODUCT_COPY_FILES += \
 # Product specific Packages
 PRODUCT_PACKAGES += \
     GalaxyNote2Settings \
-    libsecril-client
+    libsecril-client \
+    libsecril-client-sap
 
 #    SamsungServiceMode
 #    libsecril-client-sap \
